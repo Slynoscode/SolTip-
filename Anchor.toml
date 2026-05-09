@@ -13,6 +13,6 @@ cluster = "localnet"
 wallet = '~\.config\solana\id.json'
 
 [scripts]
-test = "cargo test"
+test = "bash -lc 'source \"$HOME/.cargo/env\" 2>/dev/null || true; cargo test -p soltip'"
 
 [hooks]
