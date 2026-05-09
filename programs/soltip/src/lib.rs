@@ -16,6 +16,10 @@ pub mod soltip {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        initialize::handler(ctx)
+        initialize::handle_initialize(ctx)
+    }
+
+    pub fn register_creator(ctx: Context<RegisterCreator>, handle: String) -> Result<()> {
+        register_creator::handle_register_creator(ctx, handle)
     }
 }
